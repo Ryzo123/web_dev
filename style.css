@@ -1,0 +1,369 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #007bff, #00bcd4, #4caf50, #fbc02d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.rotating-globe {
+  animation: rotate 20s linear infinite;
+  transform-origin: center;
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  top: -50px;
+  animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated-text {
+  font-size: 24px;
+  color: #000000; /* Blue color */
+  overflow: hidden;
+  border-right: 0.15em solid #333;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+.background1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: scaleAnimation 20s linear infinite;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.flex-container {
+  display: flex;
+  justify-content: left; /* Horizontal alignment */
+  align-items: center;     /* Vertical alignment */
+}
+.login-form {
+  margin-top: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for form elements */
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-error {
+  color: red;
+  margin-top: 10px;
+}
+/* style.css */
+/* Your existing styles */
+
+/* Style for the details page */
+h1 {
+  color: #007bff; /* Blue color */
+}
+/* Your existing styles */
+
+.details-container {
+  display: none; /* Initially hide the details container */
+}
+
+.details-container.active {
+  display: block; /* Show the details container when active */
+}
+/* Your existing styles */
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for the Show Password checkbox */
+.login-form input[type="checkbox"] {
+  margin-top: 5px;
+}
+
+/* Style for the password input field when shown */
+.login-form input[type="password"].show-password {
+  font-family: inherit;
+  font-size: inherit;
+  padding: inherit;
+  border: inherit;
+  background: inherit;
+  border-radius: inherit;
+  width: inherit;
+  margin-bottom: inherit;
+}
+
+
+
+
+
+/* Your existing styles */
+
+/* Your existing styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* Add this to make taskbar cover the entire x-axis */
+.taskbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it's above other content */
+
+}
+
+.search input {
+  padding: 8px;
+  border: 1px solid rgb(180, 175, 175);
+  border-radius: 4px;
+  width: 200px;
+}
+
+.social-media a {
+  margin-left: 10px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.content {
+  margin-top: 60px; /* Adjust this to add space below the fixed taskbar */
+}
+
+
+
+.user-profile {
+  position: relative;
+}
+
+.profile-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-toggle img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-toggle span {
+  font-weight: bold;
+}
+
+.profile-toggle i {
+  margin-left: 5px;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.profile-toggle:hover .profile-menu {
+  display: block;
+}
+/* Your existing styles */
+
+.search {
+  position: relative;
+}
+
+.search input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 500px;
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right: 80px;
+  transform: translateY(-50%);
+}
+
+.search button i {
+  color: #888;
+}
+
+.search button:hover i {
+  color: #333;
+}
+.navigation a {
+  margin-right: 100px;
+  color: rgb(53, 19, 223);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  color: #555;
+}
+
